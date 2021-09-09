@@ -21,7 +21,7 @@ public class CarRentalService {
             System.out.println("All cars have been rented, would you like to continue? (y/n)");
 
             while(true) {
-                String input = scanner.nextLine();
+                String input = CLI.num();
 
                 if(input.equalsIgnoreCase("n")) {
                     System.out.println("Goodbye!");
@@ -67,6 +67,8 @@ public class CarRentalService {
 
 
                     return;
+                }else {
+                    System.out.println("Car is already rented");
                 }
             }
             catch(Exception e) {
